@@ -10,6 +10,8 @@ class Nivel extends Model
 
     protected $fillable = ['nome'];
 
+    public $timestamps = false;
+
     //relacionamentos
     
     public function usuarios() {

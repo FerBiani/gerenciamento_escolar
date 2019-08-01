@@ -23,5 +23,8 @@
             </tr>
         @endforeach
     </table>
+    <br>
+    <button><a href="{{url('form')}}">Novo</a></button>
+    <button><a href="{{url('/nivel')}}">Níveis</a></button>
 </body>
 </html>
