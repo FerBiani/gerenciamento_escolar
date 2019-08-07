@@ -15,7 +15,7 @@ class CreateUsuariosTable extends Migration
 			$table->string('email', 45);
 			$table->string('nome', 45);
 			$table->date('data_nascimento');
-			$table->integer('nivel_id')->index('fk_usuarios_niveis');
+			$table->integer('nivel_id')->unsigned()->index('fk_usuarios_niveis');
 			$table->timestamps();
 			$table->softDeletes();
 		});
