@@ -16,9 +16,10 @@
         @endif
 
         <label for="nome">Nome</label>
-        <input value="{{isset($nivel) ? $nivel->nome : ''}}" type="text" name="nome" id="nome"><br>
+        <input value="{{old('nome', isset($nivel) ? $nivel->nome : '')}}" type="text" name="nome" id="nome"><br>
+        {{$errors->first('nome')}}
 
-        <br>
+        <br><br>
 
         <input type="submit" value="Enviar">
     </form>

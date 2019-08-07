@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Nivel;
+use App\Http\Requests\NivelRequest;
 
 class NivelController extends Controller
 {
@@ -21,7 +22,7 @@ class NivelController extends Controller
 
     }
 
-    public function store(Request $request) {
+    public function store(NivelRequest $request) {
         
         $usuario = Nivel::create([
             'nome' => $request->nome,
@@ -37,7 +38,7 @@ class NivelController extends Controller
         return view('nivel.form', compact('nivel'));
     }
 
-    public function update(Request $request, $id) {
+    public function update(NivelRequest $request, $id) {
 
         $nivel = Nivel::findOrFail($id);
 
