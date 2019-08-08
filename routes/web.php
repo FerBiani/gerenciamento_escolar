@@ -13,7 +13,7 @@
 
 //ROTAS DE USUÁRIO
 Route::get('/', 'UsuarioController@index');
-Route::get('/form', 'UsuarioController@create');
+Route::get('/form', 'UsuarioController@create')->middleware('checarhorario');
 Route::post('/', 'UsuarioController@store');
 Route::get('/{id}/edit', 'UsuarioController@edit');
 Route::put('/{id}', 'UsuarioController@update');
